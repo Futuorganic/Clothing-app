@@ -1,0 +1,24 @@
+<h1>FAB STUFF</h1>
+<p>Brilliant clothing ideas!</p>
+
+
+<table class="table">
+	<thead>
+		<th>Photo</th>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Category</th>
+		<th>Price</th>
+	</thead>
+	<tbody>
+	<% @products.each do |product| %> 
+		<tr>
+			<td><%= image_tag(product.image, class:"picture") %></td>
+			<td><%= product.name %></td>
+			<td><%= product.description %></td>
+			<td><%= product.category %></td>
+			<td><%= product.price %></td>
+		</tr>
+	<%end%>
+	</tbody>
+</table>
